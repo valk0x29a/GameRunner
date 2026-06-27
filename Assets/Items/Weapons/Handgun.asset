@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 000b8b4d94069484c8f70c2eb462dcb3, type: 3}
+  m_Name: Handgun
+  m_EditorClassIdentifier: 
+  itemName: Handgun
+  isWeapon: 1
+  model: {fileID: 6557452711471309913, guid: 6c11d487dcd573749871770ec8536659, type: 3}
+  modelPosition: {x: -0.47, y: 0.25, z: 0.18}
+  damage: 8
+  shieldPenetrationRate: 0
+  cooldown: 0.25
+  range: 75
+  magazineSize: 7
+  reloadingTime: 1.5
+  upDownRecoil: 2
+  notMovingUpDownRecoil: 1
+  sprintUpDownRecoil: 2
+  upDownRecoilLerpSpeed: 50
+  upDownRecoilReturnLerpSpeed: 1
+  leftRightRecoilRange: 1
+  notMovingLeftRightRecoilRange: 0.5
+  sprintLeftRightRecoilRange: 2
+  leftRightRecoilLerpSpeed: 100
+  leftRightRecoilReturnLerpSpeed: 1
+  gunMode: 2

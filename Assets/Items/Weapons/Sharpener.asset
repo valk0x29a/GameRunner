@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 000b8b4d94069484c8f70c2eb462dcb3, type: 3}
+  m_Name: Sharpener
+  m_EditorClassIdentifier: 
+  itemName: Sharpener
+  isWeapon: 1
+  model: {fileID: 6443798341373655471, guid: 5c880102ce4e5974f82eb8690d3a8a2a, type: 3}
+  modelPosition: {x: -0.37, y: 0.25, z: 0.59}
+  damage: 7
+  shieldPenetrationRate: 0
+  cooldown: 0.1
+  range: 100
+  magazineSize: 30
+  reloadingTime: 1
+  upDownRecoil: 2
+  notMovingUpDownRecoil: 0.5
+  sprintUpDownRecoil: 5
+  upDownRecoilLerpSpeed: 10
+  upDownRecoilReturnLerpSpeed: 15
+  leftRightRecoilRange: 2
+  notMovingLeftRightRecoilRange: 0.5
+  sprintLeftRightRecoilRange: 5
+  leftRightRecoilLerpSpeed: 75
+  leftRightRecoilReturnLerpSpeed: 100
+  gunMode: 0

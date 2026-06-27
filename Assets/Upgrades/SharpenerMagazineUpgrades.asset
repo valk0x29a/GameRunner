@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a74cf290a11c45d4aaad1a9d298fd2d4, type: 3}
+  m_Name: SharpenerMagazineUpgrades
+  m_EditorClassIdentifier: 
+  upgradeCosts: f4010000ee020000e8030000e2040000dc050000
+  sharpenerMagazineUpgrades: 2000000022000000240000002600000028000000
+  sharpenerPrize: 2500

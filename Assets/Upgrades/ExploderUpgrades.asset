@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ea0f2fe9ad93454898c44b6a3789d09, type: 3}
+  m_Name: ExploderUpgrades
+  m_EditorClassIdentifier: 
+  upgradeCosts: dc050000d0070000b80b0000a00f000070170000
+  exploderUpgrades:
+  - exploderCooldown: 4
+    explosionForce: 10
+    explosionRadius: 10
+    staminaDrain: 6
+  - exploderCooldown: 3
+    explosionForce: 11.25
+    explosionRadius: 12.5
+    staminaDrain: 7
+  - exploderCooldown: 2
+    explosionForce: 12.5
+    explosionRadius: 15
+    staminaDrain: 8
+  - exploderCooldown: 1
+    explosionForce: 13.75
+    explosionRadius: 17.5
+    staminaDrain: 9
+  - exploderCooldown: 0.5
+    explosionForce: 15
+    explosionRadius: 20
+    staminaDrain: 10
