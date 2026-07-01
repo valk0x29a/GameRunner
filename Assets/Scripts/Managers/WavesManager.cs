@@ -14,7 +14,7 @@ public class WavesManager : MonoBehaviour
 
     EnemySpawner enemySpawner;
 
-    float timer;
+    float nextWaveTimer;
     bool isInterWaveTime;
 
     GameObject Upgrader;
@@ -36,7 +36,7 @@ public class WavesManager : MonoBehaviour
     {
         enemySpawner = GameObject.FindWithTag("EnemySpawner").GetComponent<EnemySpawner>();
         isInterWaveTime = true;
-        timer = WavesProperties[actualWave].timeToPrepare;
+        nextWaveTimer = WavesProperties[actualWave].timeToPrepare;
         Upgrader = GameObject.FindWithTag("Upgrader");
         numberOfEnemiesLeft = 0; 
         InitializeInputAsset();
@@ -46,9 +46,9 @@ public class WavesManager : MonoBehaviour
     {
         if(isInterWaveTime)
         {
-            if(timer >= 0)
+            if(nextWaveTimer >= 0)
             {
-                timer -= Time.deltaTime;
+                nextWaveTimer -= Time.deltaTime;
             }
             else
             {
@@ -72,7 +72,7 @@ public class WavesManager : MonoBehaviour
 
     public bool IsInterwaveTime() => isInterWaveTime; 
 
-    public float GetTimeLeftToNextWave() => timer; 
+    public float GetTimeLeftToNextWave() => nextWaveTimer; 
 
     public int GetActualWave() => actualWave; 
 
@@ -81,7 +81,7 @@ public class WavesManager : MonoBehaviour
         ProgressionManager.instance.AddPoints(WavesProperties[actualWave-1].rewardAmount);
         isInterWaveTime = true;
         Upgrader.SetActive(true);
-        timer = WavesProperties[actualWave].timeToPrepare;
+        nextWaveTimer = WavesProperties[actualWave].timeToPrepare;
     }
 
     public void RegisterEnemy() => numberOfEnemiesLeft++;
