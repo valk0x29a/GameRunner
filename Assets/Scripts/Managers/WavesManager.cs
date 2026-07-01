@@ -18,6 +18,8 @@ public class WavesManager : MonoBehaviour
     bool isInterWaveTime;
 
     GameObject Upgrader;
+
+    int numberOfEnemiesLeft;
     void Awake()
     {
         if (instance != null)
@@ -36,6 +38,7 @@ public class WavesManager : MonoBehaviour
         isInterWaveTime = true;
         timer = WavesProperties[actualWave].timeToPrepare;
         Upgrader = GameObject.FindWithTag("Upgrader");
+        numberOfEnemiesLeft = 0; 
         InitializeInputAsset();
     }
 
@@ -80,6 +83,19 @@ public class WavesManager : MonoBehaviour
         Upgrader.SetActive(true);
         timer = WavesProperties[actualWave].timeToPrepare;
     }
+
+    public void RegisterEnemy() => numberOfEnemiesLeft++;
+
+    public void UnRegisterEnemy()
+    {
+        numberOfEnemiesLeft--;
+        if(numberOfEnemiesLeft <= 0)
+        {
+            WavesManager.instance.EndWave();
+        }
+    }
+
+    public int GetNumberOfEnemiesLeft() => numberOfEnemiesLeft;
 
     void InitializeInputAsset()
     {

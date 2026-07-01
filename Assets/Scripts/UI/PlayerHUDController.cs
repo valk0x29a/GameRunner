@@ -114,11 +114,11 @@ public class PlayerHUDController : MonoBehaviour
         else
         {
             skipInterwaveText.gameObject.SetActive(false);
-            int enemiesLeft = EnemiesManager.instance.GetNumberOfEnemiesLeft();
+            int enemiesLeft = WavesManager.instance.GetNumberOfEnemiesLeft();
             string enemiesStatus;
             if (enemiesLeft > 1)
             {
-                enemiesStatus = EnemiesManager.instance.GetNumberOfEnemiesLeft() + " enemies left";
+                enemiesStatus = WavesManager.instance.GetNumberOfEnemiesLeft() + " enemies left";
             }
             else
             {

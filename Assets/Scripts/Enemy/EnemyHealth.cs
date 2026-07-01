@@ -60,7 +60,7 @@ public class EnemyHealth : MonoBehaviour
         GetComponent<EnemyMovement>().OnDying();
         Destroy(this.gameObject);
         ProgressionManager.instance.AddPoints(pointsPerKill);
-        EnemiesManager.instance.UnregisterEnemy();
+        WavesManager.instance.UnRegisterEnemy();
     }
 
     public int GetHP() { return hp; }

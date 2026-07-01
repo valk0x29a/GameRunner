@@ -74,7 +74,7 @@ public class EnemySpawner : MonoBehaviour
         GameObject boss = Instantiate(bosses[bossIndex]);
         boss.transform.position = new(0,spawnY,0);
 
-        EnemiesManager.instance.RegisterEnemy();
+        WavesManager.instance.RegisterEnemy();
     }
 
     void SpawnEnemy(int enemyIndex)
@@ -83,7 +83,7 @@ public class EnemySpawner : MonoBehaviour
         enemy.transform.position = CalculateSpawnPosition();
 
         enemy.transform.LookAt(player);
-        EnemiesManager.instance.RegisterEnemy();
+        WavesManager.instance.RegisterEnemy();
     }
 
     Vector3 CalculateSpawnPosition()
