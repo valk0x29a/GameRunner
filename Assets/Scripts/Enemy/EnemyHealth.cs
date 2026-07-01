@@ -63,5 +63,5 @@ public class EnemyHealth : MonoBehaviour
         WavesManager.instance.UnRegisterEnemy();
     }
 
-    public int GetHP() { return hp; }
+    public int GetHP() => hp;
 }

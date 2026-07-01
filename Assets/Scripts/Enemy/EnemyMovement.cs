@@ -170,15 +170,9 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    public void DisableMovement()
-    {
-        isDisabled = true;
-    }
+    public void DisableMovement() => isDisabled = true;
 
-    public void EnableMovement()
-    {
-        isDisabled = false;
-    }
+    public void EnableMovement() => isDisabled = false;
 
     float CalculateXZVelocity(Vector3 velocity)
     {
@@ -190,10 +184,7 @@ public class EnemyMovement : MonoBehaviour
         actualSpeed = speed;
         enemyAI.speed = speed;
     }
-    public void DrainStamina(float staminaToDrain)
-    {
-        stamina -= staminaToDrain;
-    }
+    public void DrainStamina(float staminaToDrain) => stamina -= staminaToDrain;
 
     public void Freeze()
     {
@@ -206,25 +197,13 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    public float GetStoppingDistance()
-    {
-        return enemyAI.stoppingDistance;
-    }
+    public float GetStoppingDistance() => enemyAI.stoppingDistance;
 
-    public float GetStamina()
-    {
-        return stamina;
-    }
+    public float GetStamina() => stamina;
 
-    public bool IsRechargingStamina()
-    {
-        return !state;
-    }
+    public bool IsRechargingStamina() => !state;
 
-    public bool IsDisabled()
-    {
-        return isDisabled;
-    }
+    public bool IsDisabled() => isDisabled;
 
     public bool IsOnFOV(int fieldOfView)
     {
@@ -235,29 +214,20 @@ public class EnemyMovement : MonoBehaviour
 
         return Vector3.Dot(forward, toPlayer) > fov;
     }
-    public float GetRotationSpeed()
-    {
-        return actualRotationSpeed;
-    }
-    public void SetRotationSpeed(float speed)
-    {
-        actualRotationSpeed = speed;
-    }
+    
+    public float GetRotationSpeed() => actualRotationSpeed;
 
-    public float GetDistanceFromPlayer()
-    {
-        return Vector3.Distance(transform.position, player.position);
-    }
-    public bool IsFurther(float distance)
-    {
-        return Vector3.Distance(transform.position, player.position) > distance;
-    }
+    public void SetRotationSpeed(float speed) => actualRotationSpeed = speed;
+
+    public float GetDistanceFromPlayer() => Vector3.Distance(transform.position, player.position);
+
+    public bool IsFurther(float distance) => Vector3.Distance(transform.position, player.position) > distance;
+
     public void OnDying()
     {
         if (targetsDecoy && nearestDecoy != null)
         {
             nearestDecoy.UnregisterEnemy(GetEntityId().GetHashCode());
-
         }
     }
 
