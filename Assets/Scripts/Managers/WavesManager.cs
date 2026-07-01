@@ -91,7 +91,7 @@ public class WavesManager : MonoBehaviour
         numberOfEnemiesLeft--;
         if(numberOfEnemiesLeft <= 0)
         {
-            WavesManager.instance.EndWave();
+            EndWave();
         }
     }
 
