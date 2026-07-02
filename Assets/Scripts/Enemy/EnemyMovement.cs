@@ -82,7 +82,7 @@ public class EnemyMovement : MonoBehaviour
             }
             else if (!isMoving)
             {
-                SetSpeed(actualSpeed);
+                enemyAI.speed = actualSpeed;
                 isMoving = true;
             }
             // float angularDistance = ((Vector3.Dot(forward,toPlayer)*-1) + 1.01f)/2;
@@ -158,13 +158,15 @@ public class EnemyMovement : MonoBehaviour
 
         if (stamina <= 0 && state)
         {
-            SetSpeed(outOfStaminaSpeed);
+            enemyAI.speed = outOfStaminaSpeed;
+            actualSpeed = outOfStaminaSpeed;
             actualRotationSpeed = outOfStaminaRotationSpeed;
             state = false;
         }
         if (stamina >= maxEnemyStamina && !state)
         {
-            SetSpeed(speed);
+            enemyAI.speed = speed;
+            actualSpeed = speed;
             actualRotationSpeed = rotationSpeed;
             state = true;
         }
@@ -179,11 +181,6 @@ public class EnemyMovement : MonoBehaviour
         return Mathf.Sqrt(Mathf.Pow(Mathf.Abs(velocity.x), 2) + Mathf.Pow(Mathf.Abs(velocity.z), 2));
     }
 
-    void SetSpeed(float speed)
-    {
-        actualSpeed = speed;
-        enemyAI.speed = speed;
-    }
     public void DrainStamina(float staminaToDrain) => stamina -= staminaToDrain;
 
     public void Freeze()
@@ -191,7 +188,8 @@ public class EnemyMovement : MonoBehaviour
         if(!isFastZombie)
         {
             stamina = 0;
-            SetSpeed(outOfStaminaSpeed);
+            enemyAI.speed = outOfStaminaSpeed;
+            actualSpeed = outOfStaminaSpeed;
             actualRotationSpeed = outOfStaminaRotationSpeed;
             state = false;
         }
